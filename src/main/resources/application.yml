@@ -1,0 +1,30 @@
+
+server:
+  port: 80
+
+logging:
+  config: classpath:logback-spring.xml
+
+spring:
+  application:
+    name: "springboot-log"
+
+  freemarker:
+    enabled: true
+    content-type: text/html
+    charset: utf-8
+    suffix: .ftl
+    request-context-attribute: request
+    expose-spring-macro-helpers: true
+    
+    expose-request-attributes: false
+    expose-session-attributes: false
+    
+    allow-request-override: false
+    allow-session-override: false
+    
+    check-template-location: true
+    template-loader-path:
+      - classpath:/templates/
+    settings:
+      datetime_format: yyyy-MM-dd HH:mm:ss
